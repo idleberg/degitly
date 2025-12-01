@@ -7,8 +7,11 @@ export default defineConfig((options) => {
 		target: 'node20',
 		clean: isProduction,
 		dts: isProduction,
-		entry: 'src/index.ts',
+		entry: ['src/index.ts'],
+		external: ['../package.json'],
 		format: 'esm',
 		minify: isProduction,
+		outDir: 'bin',
+		platform: 'node',
 	};
 });

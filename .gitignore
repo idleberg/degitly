@@ -5,6 +5,8 @@ lib/
 .eslintcache
 
 # Development
+.env
+.env.*
 
 # Test
 coverage/

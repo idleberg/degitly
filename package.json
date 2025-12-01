@@ -1,34 +1,36 @@
 {
-	"name": "node-package-template",
+	"name": "degitly",
 	"version": "0.0.0",
-	"private": true,
-	"description": "Just my personal package template",
+	"description": "degit clone build upon gitly, downloads Git repositories without cloning them",
 	"license": "MIT",
 	"author": "Jan T. Sott",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/idleberg/node-package-template.git"
+		"url": "git+https://github.com/idleberg/degitly.git"
 	},
-	"keywords": [],
+	"keywords": [
+		"environment variables",
+		"dotenv",
+		"load environment",
+		"vite"
+	],
 	"type": "module",
-	"exports": {
-		".": {
-			"types": "./dist/index.d.ts",
-			"import": "./dist/index.js"
-		}
+	"bin": {
+		"degitly": "./bin/index.mjs",
+		"dg": "./bin/index.mjs"
 	},
 	"engines": {
 		"node": ">=20"
 	},
 	"files": [
-		"dist/",
+		"bin/",
 		"LICENSE",
 		"README.md"
 	],
 	"scripts": {
 		"build": "tsdown",
-		"dev": "tsdown --watch",
-		"lint": "concurrently --prefix-colors blue,magenta npm:lint:*",
+		"dev": "npm run build -- --watch",
+		"lint": "concurrently --prefix-colors blue,green,magenta npm:lint:*",
 		"lint:biome": "biome check",
 		"lint:e18e": "e18e-cli analyze",
 		"prepack": "npm run lint && npm run build",
@@ -37,19 +39,25 @@
 		"publish:npm": "np --any-branch",
 		"test": "vitest run"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"commander": "^14.0.2",
+		"gitly": "^3.2.1",
+		"kleur": "^4.1.5",
+		"log-symbols": "^7.0.1"
+	},
 	"devDependencies": {
 		"@commitlint/cli": "^20.1.0",
 		"@commitlint/config-conventional": "^20.0.0",
 		"@e18e/cli": "^0.3.1",
 		"@idleberg/configs": "^0.3.3",
-		"@types/node": "^24.10.0",
-		"@vitest/coverage-v8": "^4.0.8",
+		"@types/node": "^24.10.1",
+		"@vitest/coverage-v8": "^4.0.14",
 		"concurrently": "^9.2.1",
 		"np": "^10.2.0",
-		"tsdown": "^0.16.1",
-		"vitest": "^4.0.8"
+		"tsdown": "0.17.0-beta.4",
+		"tsup": "^8.5.1",
+		"typescript": "^5.9.3",
+		"vitest": "^4.0.14"
 	},
-	"peerDependencies": {},
 	"packageManager": "pnpm@10.21.0+sha512.da3337267e400fdd3d479a6c68079ac6db01d8ca4f67572083e722775a796788a7a9956613749e000fac20d424b594f7a791a5f4e2e13581c5ef947f26968a40"
 }

@@ -1,24 +1,44 @@
-# node-package-template
+# degitly
 
-> Just my personal package template.
+> `degit` clone build upon `gitly`, downloads Git repositories without cloning them.
 
-[![License](https://img.shields.io/github/license/idleberg/node-package-template?color=blue&style=for-the-badge)](https://github.com/idleberg/node-package-template/blob/main/LICENSE)
-[![Version: npm](https://img.shields.io/npm/v/node-package-template?style=for-the-badge)](https://www.npmjs.org/package/node-package-template)
-![GitHub branch check runs](https://img.shields.io/github/check-runs/idleberg/node-package-template/main?style=for-the-badge)
-
-A template with highly opinionated configuration. Works for me, maybe not for you!
+[![License](https://img.shields.io/github/license/idleberg/gitly-cli?color=blue&style=for-the-badge)](https://github.com/idleberg/gitly-cli/blob/main/LICENSE)
+[![Version: npm](https://img.shields.io/npm/v/gitly-cli?style=for-the-badge)](https://www.npmjs.org/package/gitly-cli)
+![GitHub branch check runs](https://img.shields.io/github/check-runs/idleberg/gitly-cli/main?style=for-the-badge)
 
 ## Installation 💿
 
-In GitHub, click on *"Use this template"* to create a new repo from this template. Alternatively, you can use degit.
-
 ```shell
-npx degit github:idleberg/node-package-template
+npm install degitly
 ```
 
 ## Usage 🚀
 
-That's the one thing you have to figure out!
+**Examples**
+
+```shell
+dg sveltejs/template
+
+# these commands are equivalent
+dg github:sveltejs/template
+dg git@github.com:sveltejs/template
+dg https://github.com/sveltejs/template
+
+# specific branch or tag
+dg https://github.com/sveltejs/template#master
+dg https://github.com/sveltejs/template#v1.0.0
+
+# optional output directory
+dg sveltejs/template svelte-app
+```
+
+See `dg --help` for all available options.
+
+## Related 👫
+
+If this project is not for you, maybe these alternatives suit you better:
+
+- [degit](https://www.npmjs.com/package/degit)
 
 ## License ©️
 
