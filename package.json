@@ -9,10 +9,10 @@
 		"url": "git+https://github.com/idleberg/degitly.git"
 	},
 	"keywords": [
-		"environment variables",
-		"dotenv",
-		"load environment",
-		"vite"
+		"scaffolding",
+		"template",
+		"gitly",
+		"degit"
 	],
 	"type": "module",
 	"bin": {
