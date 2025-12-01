@@ -8,8 +8,11 @@
 
 ## Installation 💿
 
+> [!TIP]
+> Most of the times it's sufficient to run `npx degitly` rather than installing it.
+
 ```shell
-npm install degitly
+npm install --global degitly
 ```
 
 ## Usage 🚀
