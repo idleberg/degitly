@@ -16,7 +16,7 @@ export async function handleCli() {
 			writeOut: (message: string) => logger.log(message),
 			writeErr: (message: string) => logger.error(message),
 		})
-		.argument('<repository>')
+		.argument('<repository>', 'specify a repository to download')
 		.argument('[directory]', 'set an output directory')
 		.option('-D, --debug', 'print additional debug output', false)
 		.optionsGroup('degitly Options')
