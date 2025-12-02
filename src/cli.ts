@@ -19,7 +19,6 @@ export async function handleCli() {
 		.argument('<repository>', 'specify a repository to download')
 		.argument('[directory]', 'set an output directory')
 		.option('-D, --debug', 'print additional debug output', false)
-		.optionsGroup('degitly Options')
 		.option('-c, --cache', 'use cache only', false)
 		.option('-x, --exclude <file...>', 'exclude files from extraction', [])
 		.option('-f, --force', 'allow overwriting existing directory', false)
