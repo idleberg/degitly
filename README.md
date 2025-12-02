@@ -9,7 +9,7 @@
 ## Installation 💿
 
 > [!TIP]
-> Most of the times it's sufficient to run `npx degitly` rather than installing it. However, if you prefer to install it you can also use the `dg` shorthand instead of `degit`.
+> Most of the time, it's sufficient to run `npx degitly` rather than installing it. However, if you prefer to install it, you can also use the `dg` shorthand rather than `degit`.
 
 ```shell
 npm install --global degitly
