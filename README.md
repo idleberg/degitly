@@ -1,6 +1,6 @@
 # degitly
 
-> `degit` clone build upon `gitly`, downloads Git repositories without cloning them.
+> `degit` clone powered by `gitly`, downloads Git repositories without cloning them.
 
 [![License](https://img.shields.io/github/license/idleberg/degitly?color=blue&style=for-the-badge)](https://github.com/idleberg/degitly/blob/main/LICENSE)
 [![Version: npm](https://img.shields.io/npm/v/degitly?style=for-the-badge)](https://www.npmjs.org/package/degitly)
