@@ -52,7 +52,9 @@ import { fileExists, truncate } from './utils.ts';
 				: undefined,
 		});
 	} catch (error) {
-		logger.error((error as Error).message);
+		const errorMessage = (error as Error).message.replace(/\[gitly:\w+\]:\s/, '');
+
+		logger.error(`Error: ${errorMessage}`);
 		process.exit(1);
 	}
 	logger.info(`Extracted files to "${outdir}"`);
