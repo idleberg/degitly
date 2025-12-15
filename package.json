@@ -1,7 +1,7 @@
 {
 	"name": "degitly",
 	"version": "0.1.1",
-	"description": "degit powered by gitly, downloads Git repositories without cloning them",
+	"description": "degit clone powered by gitly, downloads Git repositories without cloning them",
 	"license": "MIT",
 	"author": "Jan T. Sott",
 	"repository": {
