@@ -6,9 +6,11 @@ export default defineConfig((options) => {
 	return {
 		target: 'node20',
 		clean: isProduction,
+		deps: {
+			neverBundle: ['../package.json'],
+		},
 		dts: isProduction,
 		entry: ['src/index.ts'],
-		external: ['../package.json'],
 		format: 'esm',
 		minify: isProduction,
 		outDir: 'bin',
