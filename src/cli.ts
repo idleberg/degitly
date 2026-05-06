@@ -26,6 +26,11 @@ export async function handleCli() {
 		.option('-p, --proxy <url>', 'set proxy server')
 		.option('-t, --temp <directory>', 'set cache directory', tmpdir());
 
+	if (process.argv.length <= 2) {
+		program.outputHelp();
+		process.exit(0);
+	}
+
 	program.parse();
 
 	const args = program.args;

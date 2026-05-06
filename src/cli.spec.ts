@@ -173,19 +173,15 @@ describe('handleCli', () => {
 		exitSpy.mockRestore();
 	});
 
-	it('should use logger.error for error messages', async () => {
-		process.argv = ['node', 'degitly']; // Missing required repository argument
+	it('should show help and exit when no arguments are provided', async () => {
+		process.argv = ['node', 'degitly'];
 		const exitSpy = vi.spyOn(process, 'exit').mockImplementation(() => undefined as never);
 
 		const { handleCli } = await import('./cli.ts');
+		await handleCli();
 
-		try {
-			await handleCli();
-		} catch {
-			// Commander calls process.exit on error
-		}
-
-		expect(logger.error).toHaveBeenCalled();
+		expect(logger.log).toHaveBeenCalledWith(expect.stringContaining('Usage:'));
+		expect(exitSpy).toHaveBeenCalledWith(0);
 		exitSpy.mockRestore();
 	});
 
